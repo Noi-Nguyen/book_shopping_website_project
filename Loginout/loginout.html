@@ -13,18 +13,18 @@
     <div class='header'>
         <!-- TODO: Adding header here when done -->
     </div>
-    <section class="log_body">
-        <div class="wrapper">
+    <section class="loginout">
+        <div class="loginout__container">
             <!-- Tab links -->
-            <div>
-                <ul class="nav nav-tabs tabs">
+            <div >
+                <ul class="nav nav-tabs loginout__tabs">
                     <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#login">Log in</a></li>
                     <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#signup">Sign up</a></li>
                 </ul>
             </div>
     
-            <div class="body_tab">
-                <div class="row tab-content">
+            <div class="loginout__body">
+                <div class="row tab-content loginout__content">
                     <!-- Tab content -->
                     <div class="col-sm-5 log_social">
                         <ul>
@@ -37,7 +37,7 @@
                         </ul>
                     </div>
                     <!-- form đăng nhập -->
-                    <div class="tab-pane active col-sm-7" id="login">
+                    <div class="tab-pane active col-sm-7 loginout__form" id="login">
                         <form action="index.php?page=login" method="post" enctype="multidata/form-data">
                             <div class="form-group">
                                 <label for="username">Tên tài khoản:</label>
@@ -58,7 +58,7 @@
                         </form>
                     </div>
                     <!-- form đăng kí -->
-                    <div class="tab-pane col-sm-7" id="signup">
+                    <div class="tab-pane col-sm-7 loginout__form" id="signup">
                         <form action="index.php?page=register" method="post" enctype="multidata/form-data">
                             <div class="form-group">
                                 <label for="email">Họ và tên:</label>

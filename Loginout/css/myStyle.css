@@ -22,7 +22,6 @@ a{
     text-decoration: none;
 }
 a:hover {
-    text-decoration: none;
     color: #00AFEF;
 }
 
@@ -63,7 +62,11 @@ li {
 
 
 /*---------------------------------------------------*/
-.wrapper {
+
+.loginout {
+    margin-top: 60px;
+}
+.loginout__container {
     width: 700px;
     height: auto;
     margin: 0 auto;
@@ -71,20 +74,16 @@ li {
     border: 1px solid #E5E5E5;
 }
 
-
-.log_body {
-    margin-top: 60px;
-}
-.tabs{
+.loginout__tabs{
     background-color: white ;
     justify-content: center;
 }
-ul.tabs {
+ul.loginout__tabs {
     list-style: none;
     border-bottom: 1px solid #E5E5E5;
 }
 
-ul.tabs li {
+ul.loginout__tabs li {
     background: none;
     color: #222;
     display: inline-block;
@@ -99,7 +98,7 @@ ul.tabs li {
     border-color:#00afef #dee2e6 #fff;
     font-size: 100%;
 }
-.body_tab{
+.loginout__body{
     background: white;
 }
 .log_social {
@@ -119,51 +118,35 @@ ul.tabs li {
     color: white;
 }
 
-label {
+.loginout__form label {
     display: inline-block;
     max-width: 100%;
     margin-bottom: 5px;
     font-size: 80%;
     font-weight: bold;
     margin-top: 10px;
-  }
-  input[type="search"] {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  input[type="radio"],
-  input[type="checkbox"] {
-    margin: 4px 0 0;
-    margin-top: 1px \9;
-    line-height: normal;
-  }
-  input[type="file"] {
-    display: block;
-  }
-  input[type="range"] {
-    display: block;
-    width: 100%;
-  }
-  select[multiple],
-  select[size] {
-    height: auto;
-  }
-  input[type="file"]:focus,
-  input[type="radio"]:focus,
-  input[type="checkbox"]:focus {
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
-  }
-
-  @media screen and (max-width: 650px) {
-      .wrapper{
-          width:100%;
-      }
-      .login_social_btn{
-        margin: auto;
-      }
+}
+.loginout__input[type="radio"],
+.loginout__input[type="checkbox"] {
+margin: 4px 0 0;
+margin-top: 1px \9;
+line-height: normal;
+}
+.loginout__input[type="file"]:focus,
+.loginout__input[type="radio"]:focus,
+.loginout__input[type="checkbox"]:focus {
+outline: 5px auto -webkit-focus-ring-color;
+outline-offset: -2px;
+}
+  
+@media screen and (max-width: 650px) {
+    .loginout__container{
+        width:100%;
+    }
+    .login_social_btn{
+    margin: auto;
+    }
     .btn .btn-primary{
         margin: auto;
     }
-  }
+}
