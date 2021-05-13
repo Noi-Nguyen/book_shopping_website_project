@@ -1,5 +1,16 @@
 
 
+
+/*---------------------------------------------------*/
+
+
+/*----------------------LOG IN/SIGN UP---------------------*/
+
+
+/*---------------------------------------------------*/
+
+
+
 * {
     padding: 0px;
     margin: 0px;
@@ -13,58 +24,34 @@ html {
     text-rendering: optimizeLegibility;
 }
 
-
 body {
     overflow-x: hidden;
     background-color: #f4f4f4;
 }
-a{
+
+.loginout {
+    margin-top: 60px;
+}
+.loginout a{
     text-decoration: none;
 }
-a:hover {
+.loginout a:hover {
     color: #00AFEF;
 }
 
-li {
+.loginout li {
     list-style: none;
 }
 
-
-/* header {
-    margin-bottom: 30px;
-} */
-
-
-/*---------------------------------------------------*/
-
-
-/*----------------------REUSABLE COMONENT---------------------*/
-
-
-/*---------------------------------------------------*/
-
-.clearfix::after {
+.loginout .clearfix::after {
     content: " ";
     display: table;
     clear: both;
 }
 
-.row {
+.loginout .row {
     max-width: 1140px;
     margin: 0 auto;
-}
-
-
-/*---------------------------------------------------*/
-
-
-/*----------------------LOG IN/SIGN UP---------------------*/
-
-
-/*---------------------------------------------------*/
-
-.loginout {
-    margin-top: 60px;
 }
 .loginout__container {
     width: 700px;
