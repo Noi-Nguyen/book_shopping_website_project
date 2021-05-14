@@ -255,3 +255,15 @@ outline-offset: -2px;
     border-bottom-width: 4px;
 }
 
+/* admin index sidebar */
+/*style sidebar*/
+
+.ad-container{
+    width: 100%;
+}
+.ad-nav{
+    padding: 15px;
+}
+.ad-signout a{
+    color: white;
+}
