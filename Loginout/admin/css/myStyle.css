@@ -6,19 +6,38 @@
 .ad-container{
     width: 100%;
 }
-.ad-nav{
-    padding: 15px;
-}
+
 .ad-signout a{
     color: white;
 }
+
 .sidebar-nav{
     width: var(--offcanvas-width);
 }
 
+.sidebar-nav a:hover{
+    color: white !important;
+    font-size: 120%;
+}
+.ad-content{
+    padding-top: 45px;
+}
+.ad__card {
+    max-width: 12rem;
+    text-align: center;
+    margin: 10px;
+}
+.ad__card a{
+    color: inherit;
+    text-decoration: none;
+}
+.ad__card a:hover{
+    text-decoration: underline;
+}
 @media (min-width: 992px){
+
     body{
-        overflow: auto;
+        overflow: auto !important;
     }
     .offcanvas-backdrop::before{
         display: none;
@@ -27,6 +46,7 @@
         margin-left: var(--offcanvas-width) ;
     }
     .sidebar-nav{
+        position: fixed;
         transform: none;
         visibility: visible !important;
         top: var(--topNavbarHeight);

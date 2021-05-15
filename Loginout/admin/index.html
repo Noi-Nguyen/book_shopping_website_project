@@ -13,7 +13,7 @@
 <body>
     <div class="ad-container">
         <!-- nav bar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ad-nav fixed-top">
             <div class="container-fluid">
                 <!-- canvas trigger button -->
                 <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -37,6 +37,7 @@
                     </div>
                 </div>
             </div>
+            
           </nav>              
         <!-- end of nav bar -->
         <!-- offcanvas -->
@@ -49,24 +50,21 @@
                         <ul class="navbar-nav">
                             <li>
                                 <a href="#" class="nav-link px-3 active text-muted fw-bold">
-                                <span class="me-2"><i class="bi bi-speedometer2"></i></span>
-                                
+                                    <span class="me-2"><i class="bi bi-speedometer2"></i></span>                                
                                     Trang chủ
                                 </a>
                                 <hr class="dropdown-divider">
                             </li>
                             <li>
                                 <a href="#" class="nav-link px-3 active text-muted fw-bold">
-                                <span class="me-2"><i class="bi bi-newspaper"></i></span>
-                                
+                                    <span class="me-2"><i class="bi bi-newspaper"></i></span>                                
                                     Tin tức
                                 </a>
                                 <hr class="dropdown-divider">
                             </li>
                             <li>
                                 <a href="#" class="nav-link px-3 active text-muted fw-bold">
-                                <span class="me-2"><i class="bi bi-chat-dots"></i></span>
-                                
+                                    <span class="me-2"><i class="bi bi-chat-dots"></i></span>
                                     Tin nhắn
                                 </a>
                                 <hr class="dropdown-divider">
@@ -75,7 +73,23 @@
                                 <a href="#" class="nav-link px-3 active text-muted fw-bold">
                                 <span class="me-2"><i class="bi bi-filter-left"></i></span>
                                 
-                                    Quản lý danh mục sách
+                                    Quản lý danh mục
+                                </a>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-3 active text-muted fw-bold">
+                                <span class="me-2"><i class="bi bi-book"></i></span>
+                                
+                                    Quản lý sách
+                                </a>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-3 active text-muted fw-bold">
+                                <span class="me-2"><i class="bi bi-people"></i></span>
+                                
+                                    Khách hàng
                                 </a>
                                 <hr class="dropdown-divider">
                             </li>
@@ -94,35 +108,66 @@
                                     Báo cáo
                                 </a>
                                 <hr class="dropdown-divider">
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link px-3 active text-muted fw-bold">
-                                <span class="me-2"><i class="bi bi-people"></i></span>
-                                
-                                    Khách hàng
-                                </a>
-                                <hr class="dropdown-divider">
-                            </li>
-                            
+                            </li>                            
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
     </div>
+    <!-- end of ofcanvas -->
     <!-- start the content of admin page -->
-    <main class="mt-5 pt-3">
-        <div class="container-fluid">
+    <main class="mt-1 pt-3 ">
+        <div class="container-fluid ad-content">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                        <div class="card-header"><i class="bi bi-people"></i></div>
-                        <div class="card-body">
-                          <h5 class="card-title">14</h5>
-                          <p class="card-text">Khách hàng</p>
-                        </div>
-                      </div>
-                       
+                <!-- card component -->
+                <div class="card border-dark mb-3 text-dark ad__card col-md-4" >
+                    <div class="card-header bg-transparent border-dark"><i class="bi bi-newspaper fa-5x"></i></div>
+                    <div class="card-body text-dark">
+                      <h5 class="card-title">16</h5>
+                      <p class="card-text">Tin tức</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-dark"><a href="#">Xem chi tiết</a></div>
+                </div>
+                <div class="card border-dark mb-3 ad__card col-md-3" >
+                    <div class="card-header bg-transparent border-dark"><i class="bi bi-chat-dots fa-5x"></i></div>
+                    <div class="card-body text-dark">
+                      <h5 class="card-title">32</h5>
+                      <p class="card-text">Tin nhắn</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-dark"><a href="#">Xem chi tiết</a></div>
+                </div>
+                <div class="card border-dark mb-3 ad__card col-md-4" >
+                    <div class="card-header bg-transparent border-dark"><i class="bi bi-filter-left fa-5x"></i></div>
+                    <div class="card-body text-dark">
+                      <h5 class="card-title">5</h5>
+                      <p class="card-text">Danh mục</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-dark"><a href="#">Xem chi tiết</a></div>
+                </div>
+                <div class="card border-dark mb-3 ad__card col-md-4" >
+                    <div class="card-header bg-transparent border-dark"><i class="bi bi-book fa-5x"></i></div>
+                    <div class="card-body text-dark">
+                      <h5 class="card-title">56</h5>
+                      <p class="card-text">Sách</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-dark"><a href="#">Xem chi tiết</a></div>
+                </div>
+                <div class="card border-dark mb-3 ad__card col-md-4" >
+                    <div class="card-header bg-transparent border-dark"><i class="bi bi-people fa-5x"></i></div>
+                    <div class="card-body text-dark">
+                      <h5 class="card-title">20</h5>
+                      <p class="card-text">Khách hàng</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-dark"><a href="#">Xem chi tiết</a></div>
+                </div>
+                <div class="card border-dark mb-3 ad__card col-md-3">
+                    <div class="card-header bg-transparent border-dark"><i class="bi bi-cart2 fa-5x"></i></div>
+                    <div class="card-body text-dark">
+                      <h5 class="card-title">19</h5>
+                      <p class="card-text">Đơn hàng</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-dark"><a href="#">Xem chi tiết</a></div>
                 </div>
             </div>
         </div>
