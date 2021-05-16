@@ -1,0 +1,9 @@
+.container {
+  max-width: 960px;
+}
+ul li::marker {
+  display: none !important;
+}
+ul {
+  list-style-type: none;
+}
