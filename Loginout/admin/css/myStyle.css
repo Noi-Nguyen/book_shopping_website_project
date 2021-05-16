@@ -34,6 +34,9 @@
 .ad-content a:hover{
     text-decoration: underline;
 }
+.ad__table--sm{
+    font-size: x-small;
+}
 .ad__table img{
     width: 30px;
     height: 50px;
