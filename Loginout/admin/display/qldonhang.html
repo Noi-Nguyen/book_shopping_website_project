@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin page</title>
+    <title>Quản lý đơn hàng</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/myStyle.css">
+    <link rel="stylesheet" href="../css/myStyle.css">
 </head>
 <body>
     <div class="ad-container">
@@ -103,7 +103,7 @@
                             </li>
                             <li>
                                 <a href="#" class="nav-link px-3 active text-muted fw-bold">
-                                <span class="me-2"><i class="bi bi-bar-chart"></i></span>
+                                <span class="me-2"><i class="bi bi-file-earmark-bar-graph"></i></span>
                                 
                                     Báo cáo
                                 </a>
@@ -120,64 +120,72 @@
     <main class="mt-1 pt-3 ">
         <div class="container-fluid ad-content">
             <!-- content body here -->
+            <h3>Quản lý đơn hàng</h3>
             <div class="row">
-                <!-- card component -->
-                <!-- card Tin tức -->
-                <div class="card border-dark mb-3 text-dark ad__card col-md-3" >
-                    <div class="card-header bg-transparent border-dark"><i class="bi bi-newspaper fa-5x"></i></div>
-                    <div class="card-body text-dark">
-                      <h5 class="card-title">16</h5>
-                      <p class="card-text">Tin tức</p>
-                    </div>
-                    <div class="card-footer bg-transparent border-dark"><a href="#">Xem chi tiết</a></div>
-                </div>
-
-                <!-- card Tin nhan -->
-                <div class="card border-dark mb-3 ad__card col-md-3" >
-                    <div class="card-header bg-transparent border-dark"><i class="bi bi-chat-dots fa-5x"></i></div>
-                    <div class="card-body text-dark">
-                      <h5 class="card-title">32</h5>
-                      <p class="card-text">Tin nhắn</p>
-                    </div>
-                    <div class="card-footer bg-transparent border-dark"><a href="#">Xem chi tiết</a></div>
-                </div>
-                <!-- card danh mục-->
-                <div class="card border-dark mb-3 ad__card col-md-3" >
-                    <div class="card-header bg-transparent border-dark"><i class="bi bi-filter-left fa-5x"></i></div>
-                    <div class="card-body text-dark">
-                      <h5 class="card-title">5</h5>
-                      <p class="card-text">Danh mục</p>
-                    </div>
-                    <div class="card-footer bg-transparent border-dark"><a href="#">Xem chi tiết</a></div>
-                </div>
-                <!-- card sách -->
-                <div class="card border-dark mb-3 ad__card col-md-3" >
-                    <div class="card-header bg-transparent border-dark"><i class="bi bi-book fa-5x"></i></div>
-                    <div class="card-body text-dark">
-                      <h5 class="card-title">56</h5>
-                      <p class="card-text">Sách</p>
-                    </div>
-                    <div class="card-footer bg-transparent border-dark"><a href="#">Xem chi tiết</a></div>
-                </div>
-                <!-- card khách hàng -->
-                <div class="card border-dark mb-3 ad__card col-md-3" >
-                    <div class="card-header bg-transparent border-dark"><i class="bi bi-people fa-5x"></i></div>
-                    <div class="card-body text-dark">
-                      <h5 class="card-title">20</h5>
-                      <p class="card-text">Khách hàng</p>
-                    </div>
-                    <div class="card-footer bg-transparent border-dark"><a href="#">Xem chi tiết</a></div>
-                </div>
-                <!-- card đơn hàng -->
-                <div class="card border-dark mb-3 ad__card col-md-3">
-                    <div class="card-header bg-transparent border-dark"><i class="bi bi-cart2 fa-5x"></i></div>
-                    <div class="card-body text-dark">
-                      <h5 class="card-title">19</h5>
-                      <p class="card-text">Đơn hàng</p>
-                    </div>
-                    <div class="card-footer bg-transparent border-dark"><a href="#">Xem chi tiết</a></div>
-                </div>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Tìm kiếm" style="max-width: 30%;" name="SearchField">
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
+            
             </div>
+            <div class="table-responsive">
+                <table class="table align-middle text-dark">
+                  <thead>
+                    <tr>
+                        <th>Mã đơn hàng</th>
+                        <th>Tên khách hàng</th>
+                        <th>Ngày đặt</th>
+                        <th>Thông tin</th>
+                        <th>Ghi chú</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>25</td>
+                        <td>Nguyễn Thiên An</td>
+                        <td>25/3/2021</td>
+                        <td><a href="#">Xem chi tiết</a></td>
+                        <td>  </td>
+                        <td>Đã giao hàng</td>                    
+                    </tr>
+                    <tr class="align-bottom">
+                        <td>26</td>
+                        <td>Nguyễn Văn Bé</td>
+                        <td>22/2/2021</td>
+                        <td><a href="#">Xem chi tiết</a></td>
+                        <td></td>
+                        <td>Đã giao hàng</td>
+                    </tr>
+                    <tr class="align-bottom">
+                        <td>27</td>
+                        <td>Nguyễn Văn Cường</td>
+                        <td>19/2/2019</td>
+                        <td><a href="#">Xem chi tiết</a></td>
+                        <td></td>
+                        <td>Đã giao hàng</td>
+                    </tr>
+                    <tr class="align-bottom">
+                        <td>28</td>
+                        <td>Lê Văn Danh</td>
+                        <td>25/3/2021</td>
+                        <td><a href="#">Xem chi tiết</a></td>
+                        <td></td>
+                        <td>Đã giao hàng</td>
+                    </tr>
+                    <tr>
+                      <td>35</td>
+                      <td>Lê Văn Tí</td>
+                      <td class="align-top">26/4/2021</td>
+                      <td><a href="#">Xem chi tiết</a></td>
+                      <td>Giao giờ hành chính</td>
+                      <td>Chưa giao hàng</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- Button câp nhật -->
+                <button type="button" class="btn btn-dark">Cập nhật</button>
+              </div>
         </div>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
