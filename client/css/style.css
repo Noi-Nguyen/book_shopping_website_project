@@ -259,10 +259,9 @@ select {
 .product-item__image {
   padding: 10px;
 }
-
-/* .product-item__price {
-  padding: 10px;
-} */
+.product-item__text {
+  height: 120px;
+}
 
 .product-item__text h3 {
   color: black;
@@ -382,6 +381,10 @@ select {
     align-items: center;
     margin: auto;
   }
+
+  .product-item__text {
+    width: 200px;
+  }
 }
 
 @media only screen and (max-width: 360px) {
@@ -477,6 +480,7 @@ select {
   margin: 10px 0px;
   color: black;
 }
+
 /* ------------------------------Responsive------------------------------ */
 
 @media only screen and (max-width: 1000px) {
