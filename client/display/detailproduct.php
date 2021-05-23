@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>List product</title>
-    <link rel="stylesheet" href="style/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-
-  <body style="font-family: Verdana; color: #aaaaaa">
+<!-- Start page  -->
+<?php include "../includes/database.php"; ?>
+<?php include "../includes/head.php"; ?>
     <div class="row product-details">
       <div class="col-3 product-details__menu">
         <div class="product-details__slider">
@@ -34,7 +22,7 @@
         <!-- breadcrumb -->
         <ul class="breadcrumb">
           <li><a href="#">Trang chủ</a></li>
-          <li><a href="#">Cửa hàng</a></li>
+          <li><a href="./product.php">Cửa hàng</a></li>
           <li><a href="#">Nhân vật-sự kiện</a></li>
           <li>10 nguyên tắc để trở thành nhân tài của Bill...</li>
         </ul>
@@ -42,7 +30,7 @@
         <div class="product-details-cover">
           <div class="product-details__books">
             <div class="product-details-img">
-              <img src="/assets/17.jpg" alt="product" />
+              <img src="../assets/17.jpg" alt="product" />
             </div>
             <div class="product-details-infor">
               <h2>10 nguyên tắc trở thành nhân tài của Bill Gates</h2>
@@ -81,9 +69,22 @@
         <div class="product-details-list">
             <p style="color: #0275d8; padding-left: 40px;margin: 40px 0px;">Sách liên quan</p>
             <div class="product-grid">
+                <div class="product-item" onclick="location.href='detailproduct.php'">
+                  <div class="product-item__image center">
+                    <img src="../assets/1.jpg" alt="product1">
+                  </div>
+                  <div class="product-item__text">
+                    <h3>Hát cùng những vì sao</h3>
+                    <p>Đỗ Nhật Nam</p>                   
+                  </div>
+                  <div class="product-item__price" style="display:flex; justify-content: space-between;">
+                    <p>45,000</p>
+                    <i class="fa fa-shopping-cart" style="color:#fff;background-color: #aaaaaa; width: 30px; height: 30px; align-items: center;"></i>
+                  </div>
+                </div>
                 <div class="product-item">
                   <div class="product-item__image center">
-                    <img src="/assets/1.jpg" alt="product1">
+                    <img src="../assets/2.jpg" alt="product1">
                   </div>
                   <div class="product-item__text">
                     <h3>Dưới sao mẹ kể con nghe</h3>
@@ -96,11 +97,11 @@
                 </div>
                 <div class="product-item">
                   <div class="product-item__image center">
-                    <img src="/assets/1.jpg" alt="product1">
+                    <img src="../assets/3.jpg" alt="product1">
                   </div>
                   <div class="product-item__text">
-                    <h3>Dưới sao mẹ kể con nghe</h3>
-                    <p>Phan Thị Hồ Điệp</p>                   
+                    <h3>Ánh sao trong lòng bố</h3>
+                    <p>Đỗ Xuân Thảo</p>                   
                   </div>
                   <div class="product-item__price" style="display:flex; justify-content: space-between;">
                     <p>35,000</p>
@@ -109,11 +110,24 @@
                 </div>
                 <div class="product-item">
                   <div class="product-item__image center">
-                    <img src="/assets/1.jpg" alt="product1">
+                    <img src="../assets/4.jpg" alt="product1">
                   </div>
                   <div class="product-item__text">
-                    <h3>Dưới sao mẹ kể con nghe</h3>
-                    <p>Phan Thị Hồ Điệp</p>                   
+                    <h3>Đời Như giấc mộng</h3>
+                    <p>Lê Đình Phương</p>                   
+                  </div>
+                  <div class="product-item__price" style="display:flex; justify-content: space-between;">
+                    <p>45,000</p>
+                    <i class="fa fa-shopping-cart" style="color:#fff;background-color: #aaaaaa; width: 30px; height: 30px; align-items: center;"></i>
+                  </div>
+                </div>
+                <div class="product-item">
+                  <div class="product-item__image center">
+                    <img src="../assets/5.jpg" alt="product1">
+                  </div>
+                  <div class="product-item__text">
+                    <h3>Tuyển Thơ Lục Bát</h3>
+                    <p>Nguyễn Dung</p>                   
                   </div>
                   <div class="product-item__price" style="display:flex; justify-content: space-between;">
                     <p>35,000</p>
@@ -122,11 +136,11 @@
                 </div>
                 <div class="product-item">
                   <div class="product-item__image center">
-                    <img src="/assets/1.jpg" alt="product1">
+                    <img src="../assets/6.jpg" alt="product1">
                   </div>
                   <div class="product-item__text">
-                    <h3>Dưới sao mẹ kể con nghe</h3>
-                    <p>Phan Thị Hồ Điệp</p>                   
+                    <h3>Tiếng Chim Vườn Cũ</h3>
+                    <p>Nguyễn Mộng Giác</p>                   
                   </div>
                   <div class="product-item__price" style="display:flex; justify-content: space-between;">
                     <p>35,000</p>
@@ -135,74 +149,34 @@
                 </div>
                 <div class="product-item">
                   <div class="product-item__image center">
-                    <img src="/assets/1.jpg" alt="product1">
+                    <img src="../assets/7.jpg" alt="product1">
                   </div>
                   <div class="product-item__text">
-                    <h3>Dưới sao mẹ kể con nghe</h3>
-                    <p>Phan Thị Hồ Điệp</p>                   
+                    <h3>Mười năm</h3>
+                    <p>Tô Hoài</p>                   
+                  </div>
+                  <div class="product-item__price" style="display:flex; justify-content: space-between;">
+                    <p>55,000</p>
+                    <i class="fa fa-shopping-cart" style="color:#fff;background-color: #aaaaaa; width: 30px; height: 30px; align-items: center;"></i>
+                  </div>
+                </div>
+                <div class="product-item">
+                  <div class="product-item__image center">
+                    <img src="../assets/8.jpg" alt="product1">
+                  </div>
+                  <div class="product-item__text">
+                    <h3>Người tình xa xứ</h3>
+                    <p>Hồng Ảnh</p>                   
                   </div>
                   <div class="product-item__price" style="display:flex; justify-content: space-between;">
                     <p>35,000</p>
                     <i class="fa fa-shopping-cart" style="color:#fff;background-color: #aaaaaa; width: 30px; height: 30px; align-items: center;"></i>
                   </div>
                 </div>
-                <div class="product-item">
-                    <div class="product-item__image center">
-                      <img src="/assets/1.jpg" alt="product1">
-                    </div>
-                    <div class="product-item__text">
-                      <h3>Dưới sao mẹ kể con nghe</h3>
-                      <p>Phan Thị Hồ Điệp</p>                   
-                    </div>
-                    <div class="product-item__price" style="display:flex; justify-content: space-between;">
-                      <p>35,000</p>
-                      <i class="fa fa-shopping-cart" style="color:#fff;background-color: #aaaaaa; width: 30px; height: 30px; align-items: center;"></i>
-                    </div>
-                  </div>
-                  <div class="product-item">
-                    <div class="product-item__image center">
-                      <img src="/assets/1.jpg" alt="product1">
-                    </div>
-                    <div class="product-item__text">
-                      <h3>Dưới sao mẹ kể con nghe</h3>
-                      <p>Phan Thị Hồ Điệp</p>                   
-                    </div>
-                    <div class="product-item__price" style="display:flex; justify-content: space-between;">
-                      <p>35,000</p>
-                      <i class="fa fa-shopping-cart" style="color:#fff;background-color: #aaaaaa; width: 30px; height: 30px; align-items: center;"></i>
-                    </div>
-                  </div>
-                  <div class="product-item">
-                    <div class="product-item__image center">
-                      <img src="/assets/1.jpg" alt="product1">
-                    </div>
-                    <div class="product-item__text">
-                      <h3>Dưới sao mẹ kể con nghe</h3>
-                      <p>Phan Thị Hồ Điệp</p>                   
-                    </div>
-                    <div class="product-item__price" style="display:flex; justify-content: space-between;">
-                      <p>35,000</p>
-                      <i class="fa fa-shopping-cart" style="color:#fff;background-color: #aaaaaa; width: 30px; height: 30px; align-items: center;"></i>
-                    </div>
-                  </div>
-        </div>
+            </div>
 
       </div>
     </div>
-  </body>
-</html>
 
-<!-- <div class="product-details-cover">
-  <div class="product-details__content">
-    <div class="product-details-img">
-      <img src="/assets/17.jpg" alt="product" />
-    </div>
-    <div class="product-details-book">
-      <h1>10 nguyên tắc trở thành nhân tài của Bill Gates</h1>
-      <p>Tác giả: Alberto Moravia</p>
-      <p>Năm xuất bản: 15</p>
-      <p>Tình trạng: Còn hàng</p>
-      <p>Giá: 35,000</p>
-    </div>
-  </div>
-</div> -->
+<!-- End page -->
+<?php include "../includes/end.php"; ?>
