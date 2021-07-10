@@ -27,8 +27,8 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- end of canvas button -->
-                <a class="navbar-brand me-auto" href="">        
-                    <img src="./logo-uit.png" alt="">    UIT-STORE
+                <a class="navbar-brand me-auto" href="/admin/index.php">        
+                    <b>  UIT-STORE</b>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
