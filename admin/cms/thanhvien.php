@@ -28,7 +28,7 @@ function check(makh) {
                           . "<th>Email</th>"
                           . "<th>Địa chỉ</th>"
                           . "<th>Số điện thoại</th>"
-                          . "<th>Ngày tạo</th>"
+                          . "<th>Ngày sinh</th>"
                           . "<th class='aa'>Công cụ</th>"
                         . "</tr>";
                         echo "</thead>";
