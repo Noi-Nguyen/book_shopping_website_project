@@ -6,10 +6,10 @@
                 <h4 class="mx-auto text-center" style="text-align:center;">Quản lý đơn hàng</h4>
             </div>
             <div class="card-body">	  
-				<div class="row g-3  " style ="text-align: center; padding-top: 10px;" >    
+				<div class="row g-3" style ="text-align: center; padding-top: 10px;" >    
 					<form method="post">
 						<div style="display: inline-block;" class="mx-auto"> 
-							<select class="form-control m-1" name="month" style="width: 64px;">
+							<select class="form-control m-1 text-center" name="month" style="width: 107px;">
 								<option value="0" >Chọn tháng</option>
 								<option value="1" >1</option>
 								<option value="2" >2</option>
@@ -25,7 +25,7 @@
 								<option value="12" >12</option>								
 							</select>
 							
-							<select class="form-control m-1" name="year" style="width: 64px;">
+							<select class="form-control m-1 text-center" name="year" style="width: 107px;">
 								<option value="0" >Chọn Năm</option>
 								<option value="2021" >2021</option>
 								<option value="2020" >2020</option>
