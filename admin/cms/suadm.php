@@ -39,6 +39,7 @@
             <div class="card-header">
                 <h4 class="mx-auto text-center">Cập nhật danh mục</h4>
             </div>
+            <div class="card-body form-control text-center " style="padding-left: 50px;">
                 <form action="" method="post" class=" row g-3">
                     <div class="mb-3 row pt-2">
                         <label class="col-sm-5 col-form-label" for="TenDM">Tên danh mục</label>
