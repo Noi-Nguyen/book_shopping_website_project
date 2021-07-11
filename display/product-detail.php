@@ -54,7 +54,8 @@
                         <h3><?php echo $rs['tensp'] ?></h3>
 
                         <span class="pr">Tác giả: <?php echo $rs['tentg'] ?> </span><br>
-                        <span class="pr">Năm xuất bản: <?php echo $rs['soluong'] ?></span><br>
+                        <span class="pr">Số lượng: <?php echo $rs['soluong'] ?></span><br>
+                        <span class="pr">Năm xuất bản: <?php echo $rs['namxb'] ?></span><br>
                         <span class="pr">Tình trạng:
                             <?php
                             if ($rs['soluong'])
@@ -66,9 +67,18 @@
 
 
                         <div class=" pr info">
-                            <a class="btn-cart" href="?page=addcart&masp=<?php echo $rs['masp'] ?>" style="font-size: 22px;">
-                                <i class="fa fa-shopping-cart"> CHỌN MUA </i>
-                            </a>
+                            <?php
+                            $sp = $rs['masp'];
+                            if ($rs['soluong'] < 1) {
+                                echo "<a class='btn-cart' href='javascript:void(0)' style='font-size: 22px;'>";
+                                echo "<i class='fa fa-shopping-cart'> CHỌN MUA </i>";
+                                echo "</a>";
+                            } else {
+                                echo "<a class='btn-cart' href='?page=addcart&masp=$sp' style='font-size: 22px;'>";
+                                echo "<i class='fa fa-shopping-cart'> CHỌN MUA </i>";
+                                echo "</a>";
+                            }
+                            ?>
 
                         </div>
 
