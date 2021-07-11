@@ -9,6 +9,7 @@
                         <li class="breadcrumb-item active" aria-current="page"><a href="index.php?page=product">Cửa
                                 hàng</a>
                         </li>
+                        <!-- Lấy tên danh mục cho breadcrumb -->
                         <li>
                             <?php
                             if (isset($_REQUEST['madm'])) {
@@ -53,12 +54,13 @@
                         </form>
                     </div>
                 </div>
+                <!-- Thực hiện truy vấn danh sách sản phẩm -->
                 <?php
                 $query = "SELECT count(*) FROM sanpham";
                 $rs = $db->query($query);
                 $tong = $rs->fetch(PDO::FETCH_ASSOC);
                 // echo implode($tong);
-
+                // Tiến hành phân trang            
                 $limit = 16;
                 $sotrang = ceil(implode($tong) / $limit);
                 if (isset($_REQUEST['pages']) && (int)$_REQUEST['pages'] > 0) {
@@ -78,10 +80,12 @@
                 //     $max=$_REQUEST['max'];
                 //     $query.=' and '.$min.'<=giaban<='.$max; 
                 // }
+                //Tìm kiếm sản phẩm theo key truyền vào từ thanh search
                 if (isset($_REQUEST['key']) && $_REQUEST['key'] != '') {
                     $key = $_REQUEST['key'];
                     $query .= " and tensp like '%$key%'";
                 }
+                //Sắp xếp sản phẩm theo từng trường hợp
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     if ($_POST['orderby'] == 2) {
                         $query .= " order by tensp asc";
@@ -100,6 +104,7 @@
 
                 foreach ($rows as $r) {
                 ?>
+                    <!-- Hiển thị danh sách sản phẩm truy xuất được từ database -->
                     <!-- <div class="product-grid"> -->
                     <div class="product-item collumn ">
                         <div class="image">

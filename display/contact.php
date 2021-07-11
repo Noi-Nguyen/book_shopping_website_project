@@ -1,11 +1,14 @@
 <?php
+//Trả về phương thức nào truy vấn đến Server như POST, GET, HEAD, PUT
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fullname  = $_POST['fullname'];
     $email     = $_POST['email'];
     $subject   = $_POST['subject'];
     $message   = $_POST['message'];
 
+    //Sau khi lấy thông tin từ form, insert vào bảng phanhoi
     $query  = "insert into phanhoi(fullname, email, message, subject, day) values ('$fullname', '$email', '$message', '$subject', now())";
+    //Thực thi câu truy vấn
     $rowss = $db->exec($query);
 }
 ?>
@@ -17,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
 
-
+    <!-- Nếu có truy vấn, hiển thị thông báo cho người dùng -->
     <?php if (isset($rowss)) { ?>
         <div class="alert alert-success" role="alert">
             <strong> Thank you for responding to us! </strong>
@@ -45,6 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 <script>
+    //Validate form
     jQuery(function($) {
 
         $("#contact-form").validate({

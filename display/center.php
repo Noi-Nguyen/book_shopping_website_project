@@ -3,6 +3,7 @@
         <div class="row slide_body">
             <div class="col-lg-3 categories">
                 <ul class="list_categories">
+                    <!-- Lấy sản phẩm theo madm -->
                     <!-- <p class="name_categories">Các thể loại sách</p> -->
                     <li><a href="index.php?page=product&madm=25"> Khoa học công nghệ </a></li>
                     <li><a href="index.php?page=product&madm=18"> Kinh doanh </a></li>
@@ -70,12 +71,13 @@
                         </div>
                     </div>
                     <div class="row list-book">
+                        <!-- Lấy danh sách 9 sản phảm sắp xếp theo thứ tự tăng dần -->
                         <?php
                         $query = "SELECT * FROM sanpham ORDER BY masp ASC LIMIT 9"; // . " limit $start, $n";
                         $rows = $db->query($query);
                         foreach ($rows as $r) {
                         ?>
-
+                            <!-- Hiển thị sản phẩm -->
                             <div class="col-sm-4 product-item">
                                 <div class="product_box">
                                     <a href="index.php?page=product-detail&masp= <?php echo $r['masp'] ?>">

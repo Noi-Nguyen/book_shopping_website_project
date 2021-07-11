@@ -64,6 +64,7 @@
                                 </div>
                             </form> -->
                             <nav class="navbar navbar-dark">
+                                <!-- Lấy dữ liệu input đầu vào để tìm kiếm với name là Key -->
                                 <form class="form-inline" action="#" method="get">
                                     <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm" name='key'>
                                     <button class="btn btn-info" type="submit" name="page" value="product">Search</button>
@@ -84,6 +85,7 @@
                             <div class=" pr-header ">
                                 <a class="btn-cart" href="index.php?page=cart" style="font-size: 30px;margin-right: 25px;">
                                     <i class="fa fa-shopping-cart"> </i>
+                                    <!-- Hiển thị số lượng sản phẩm có trong giỏ hàng -->
                                     <?php
                                     if (isset($_SESSION['cart'])) {
                                         echo "<span class='nb'>";
@@ -97,6 +99,7 @@
                     </div>
 
                     <div class="col-sm-3" style="padding-top: 10px;">
+                        <!-- Kiểm tra xem khách hàng đã đăng nhập hay chưa để hiển thị giao diện phù hợp -->
                         <?php
                         if (!isset($_SESSION['login_member'])) {
                         ?>

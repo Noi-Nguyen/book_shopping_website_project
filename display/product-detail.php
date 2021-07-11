@@ -4,7 +4,6 @@
             <ol class="breadcrumb bread">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="index.php?page=product">Shop</a></li>
-
                 <?php
                 if (isset($_REQUEST['masp'])) {
                     $masp = $_REQUEST['masp'];
@@ -40,7 +39,7 @@
 
 
 
-
+        <!-- Hiển thị chi tiết sản phẩm -->
         <div class="row" style="padding-top: 30px; ">
             <?php include 'display/right.php'; ?>
             <div class="book-detail-body">
@@ -87,7 +86,7 @@
                     </div>
                 </div>
             </div>
-
+            <!-- Lấy danh sách sản phẩm tương tự như trang product     -->
             <div class="row">
                 <div class="col-md-9 list-product">
                     <ol class="breadcrumb bread">

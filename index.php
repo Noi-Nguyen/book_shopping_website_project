@@ -1,10 +1,12 @@
 <?php
+//Khởi động quá trình bắt đầu ghi cache
 ob_start();
+// Khởi động session và kết nối Database
 session_start();
 include './admin/includes/connect.php';
 include 'display/header.php';
 ?>
-
+<!-- Dùng hàm isset(): Kiểm tra một biến nào đó đã được khởi tạo hay chưa. Nếu đã tồn tại, isset sẽ trả về giá trị true. -->
 <?php
 if (isset($_REQUEST['page'])) {
     $page = $_REQUEST['page'];
@@ -70,5 +72,6 @@ if (isset($_REQUEST['page'])) {
 
 <?php
 include 'display/footer.php';
+// Giải phóng cache
 ob_end_flush();
 ?>

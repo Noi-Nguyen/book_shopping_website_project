@@ -2,6 +2,7 @@
     <div class="">
         <!-- <div class="footer-top">
      <?php
+        // Cập nhật thông tin email liên lạc vào bảng phanhoi
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $email     = $_POST['email'];
             $query  = "insert into phanhoi(email, day) values ($email', now())";
@@ -38,7 +39,7 @@
             <div class="col-sm-4 footer__input_email">
                 <?php
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $email     = $_POST['email'];
+                    $email = $_POST['email'];
 
                     $query  = "insert into phanhoi( email, day) values ('$email', now())";
                     $rowss = $db->exec($query);

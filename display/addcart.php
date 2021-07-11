@@ -7,14 +7,14 @@
         // $masp =  $_SESSION['cart'];
         if(isset($_SESSION['cart'][$masp]))
         {
-            //Tang so luong len 1
+            //Tăng số lượng sản phẩm lên 1
             $_SESSION['cart'][$masp]['sl']+=1;
 
 
         }
         else
         {
-            //Luu san pham nay vao session
+            //Lưu sản phẩm này vào Session
             $query="SELECT tensp, hinhanh, giaban FROM sanpham WHERE masp =" . " $masp";
             $rows=$db->query($query) ;
             $r=$rows->fetch();
@@ -37,4 +37,3 @@
         }
          echo "<script>history.back(-1)</script>";
     }
-?>
