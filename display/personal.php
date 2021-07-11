@@ -42,10 +42,11 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
             <div class="content">
                 <div class="module">
                     <?php
+                    //Cập nhật thông tin đơn hàng
                     if (isset($_REQUEST['makh'])) {
                         $makh = $_REQUEST['makh'];
                         $query = "select username, donhang.ngaytao, dhchitiet.soluong,"
-                            . " dongia, tensp, sanpham.hinhanh, donhang.ngaytao, donhang.trangthai from khachhang join donhang on"
+                            . " dongia, tensp, sanpham.hinhanh, donhang.ngaytao, donhang.trangthai, donhang.madh from khachhang join donhang on"
                             . " khachhang.makh=donhang.makh join dhchitiet on donhang.madh=dhchitiet.madh"
                             . " JOIN sanpham on dhchitiet.masp=sanpham.masp where donhang.makh=$makh";
                         $rows = $db->query($query);
@@ -57,6 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
                             . "<th>Hình ảnh</th>"
                             . "<th>Ngày đặt</th>"
                             . "<th>Trạng thái</th>"
+                            . "<th>Mã Đơn Hàng</th>"
                             . "</tr>";
                         $tong = 0;
 
@@ -76,6 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
                                 . "</td>"
                                 . "<td>$r[6]</td>"
                                 . "<td>$tb</td>"
+                                . "<td>$r[8]</td>"
                                 . "</tr>";
                         }
 
